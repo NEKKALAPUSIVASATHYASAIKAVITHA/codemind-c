@@ -3,13 +3,13 @@ using namespace std;
 int main() {
 	int n;
 	cin >> n;
-	int f = 0, s = 1;
-	while(n > s) {
-	    int t = f + s;
-		f = s;
-		s = t;
+	int a = 0, b = 1, c = a + b;
+	while (c < n) {
+		a = b;
+		b = c;
+		c = a + b;
 	}
-	if(abs(f - n) == abs(s - n)) cout << f << " " << s;
-	else if(abs(f - n) > abs(s - n)) cout << s;
-	else cout << f;
+	if (n - b == c - n) cout << b << ' ' << c;
+	else if (n - b > c - n) cout << c;
+	else cout << b;
 }
