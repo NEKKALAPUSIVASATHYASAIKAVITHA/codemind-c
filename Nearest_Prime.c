@@ -7,24 +7,27 @@ bool isprime(int n) {
 	return true;
 }
 int main() {
-	int tc;
-	cin >> tc;
-	while(tc--) {
+	int t;
+	cin >> t;
+	while (t--) {
 		int n;
 		cin >> n;
 		int l = n, r = n;
-		while(1) {
-			if(isprime(l)) {
-				cout << l << "
-";
+		while (1) {
+			// if (isprime(l) and isprime(r)) {
+			// 	cout << l << " " << r << endl;
+			// 	break;
+			// }
+			if (isprime(l)) {
+				cout << l << endl;
 				break;
 			}
-			if(isprime(r)) {
-				cout << r << "
-";
+			else if (isprime(r)) {
+				cout << r << endl;
 				break;
 			}
-			l--, r++;
+			l--;
+			r++;
 		}
 	}
 }
